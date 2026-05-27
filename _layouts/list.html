@@ -1,0 +1,14 @@
+---
+layout: base
+---
+<h1 class="site-title">✦ bhagya notes</h1>
+<p class="site-desc">notes, thoughts, and writing</p>
+
+<div class="post-list">
+  {% for post in site.posts %}
+  <a class="post-item" href="{{ post.url | prepend: site.baseurl }}">
+    <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+    <span class="post-title">{{ post.title }}</span>
+  </a>
+  {% endfor %}
+</div>
